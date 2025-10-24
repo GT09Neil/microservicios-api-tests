@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ErrorResponse",
+  "type": "object",
+  "required": ["status", "message", "timestamp"],
+  "properties": {
+    "status": { "type": "integer" },
+    "message": { "type": "string" },
+    "timestamp": { "type": "string" }
+  }
+}

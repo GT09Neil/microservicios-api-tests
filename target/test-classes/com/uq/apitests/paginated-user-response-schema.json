@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PaginatedUserResponse",
+  "type": "object",
+  "required": ["totalItems", "totalPages", "currentPage", "pageSize", "users"],
+  "properties": {
+    "totalItems": { "type": "integer" },
+    "totalPages": { "type": "integer" },
+    "currentPage": { "type": "integer" },
+    "pageSize": { "type": "integer" },
+    "users": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/UserResponse"
+      }
+    }
+  },
+  "definitions": {
+    "UserResponse": {
+      "type": "object",
+      "required": ["id", "name", "email"],
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "email": { "type": "string" }
+      }
+    }
+  }
+}

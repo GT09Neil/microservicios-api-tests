@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.071" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-24T06:04:56.939871500Z">
+<testcase classname="Flujo completo de usuario" name="Flujo completo de usuario" time="5.827">
+<system-out><![CDATA[
+Given que genero un nuevo usuario aleatorio.................................passed
+When registro el usuario....................................................passed
+Then recibo el enlace de activación.........................................passed
+When activo la cuenta del usuario...........................................passed
+Then el código de estado de respuesta debe ser 200..........................passed
+And la respuesta debe coincidir con el esquema "account-status-response-schema.json".passed
+When inicio sesión con el usuario...........................................passed
+Then el código de estado de respuesta debe ser 200..........................passed
+When intento login con contraseña incorrecta................................passed
+Then el código de estado de respuesta debe ser 400..........................passed
+And la respuesta debe coincidir con el esquema "error-response-schema.json".passed
+When registro el mismo usuario nuevamente...................................passed
+Then el código de estado de respuesta debe ser 409..........................passed
+When solicito un OTP para cambiar la contraseña.............................passed
+Then el código de estado de respuesta debe ser 200..........................passed
+And el OTP generado se almacena.............................................passed
+When cambio la contraseña del usuario.......................................passed
+Then el código de estado de respuesta debe ser 200..........................passed
+And la respuesta debe ser "Contraseña reestablecida para el usuario"........passed
+When actualizo los datos del usuario........................................passed
+Then el código de estado de respuesta debe ser 200..........................passed
+And la respuesta debe coincidir con el esquema "user-response-schema.json"..passed
+When elimino el usuario.....................................................passed
+Then el código de estado de respuesta debe ser 204..........................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OtpResponse",
+  "type": "object",
+  "required": ["otp", "otp_status", "user_id", "created_at"],
+  "properties": {
+    "id": { "type": "integer" },
+    "otp": { "type": "integer" },
+    "user_id": { "type": "integer" },
+    "created_at": { "type": "string" },
+    "otp_status": { "type": "string" },
+    "url": { "type": "string" }
+  }
+}

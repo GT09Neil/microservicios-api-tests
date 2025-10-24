@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ValidationErrorResponse",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["field", "error"],
+    "properties": {
+      "field": { "type": "string" },
+      "error": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AccountStatusResponse",
+  "type": "object",
+  "required": ["account_status"],
+  "properties": {
+    "account_status": { "type": "string", "enum": ["PENDING_VALIDATION", "VERIFIED", "DELETED"] }
+  }
+}
