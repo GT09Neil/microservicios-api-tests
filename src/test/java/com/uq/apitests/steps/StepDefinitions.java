@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class StepDefinitions {
 
     private static final Faker faker = new Faker();
-    private static final String BASE_URL = "http://localhost:8080/api/v1";
+    private static final String BASE_URL = "http://user-service:8080/api/v1";
 
     private String email;
     private String password;
